@@ -52,6 +52,11 @@
 		box-sizing: border-box;
 	}
 
+	#MacAppStore {
+		width: auto;
+		height: 40px;
+	}
+
 /* Basic */
 
 	@-ms-viewport {
