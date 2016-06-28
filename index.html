@@ -260,6 +260,15 @@
 	</script>
 </head>
 <body>
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<div class="site-wrapper">
 
 		<div class="site-wrapper-inner">
@@ -401,18 +410,9 @@
 					<div class="col-md-6">
 						<!-- <iframe class="ph-vote-button" src="http://c.yvoschaap.com/producthunt/counter.html#href=http%3A%2F%2Fwww.producthunt.com%2Fr%2Fc5e57adce5b8f8%2F54897&layout=wide" width="120" height="25" scrolling="no" frameborder="0" allowtransparency="true"></iframe> -->
 						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://falcon.star-lord.me" data-text="Falcon: Writing notes made Simple! Now on iOS & MacOS." data-via="ChintanGhate" data-hashtags="FalconNotes">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-						<!-- Load Facebook SDK for JavaScript -->
-						<div id="fb-root"></div>
-						<script>(function(d, s, id) {
-						  var js, fjs = d.getElementsByTagName(s)[0];
-						  if (d.getElementById(id)) return;
-						  js = d.createElement(s); js.id = id;
-						  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
-						  fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));</script>
 
 						<!-- Your share button code -->
-						<div class="fb-share-button" data-href="http://falcon.star-lord.me" data-layout="button_count" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ffalcon.star-lord.me%2F&amp;src=sdkpreparse">Share</a></div>
+						<div class="fb-share-button" data-href="http://falcon.star-lord.me" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ffalcon.star-lord.me%2F&amp;src=sdkpreparse">Share</a></div>
 					</div>
 				</div>
 
