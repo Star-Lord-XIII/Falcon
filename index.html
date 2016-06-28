@@ -1,140 +1,424 @@
-<!DOCTYPE HTML>
-
-<html>
-	<head>
-		<title>Falcon</title>
-		<style type="text/css">
-		#productHunt {
-			top: 10px;
-			left: 10px;
-			position: fixed;
-			z-index: 2;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:url"           content="http://falcon.star-lord.me" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Falcon" />
+	<meta property="og:description"   content="Writing Notes made Simple!" />
+	<meta property="og:image"         content="http://falcon.star-lord.me/images/FalconBanner.png" />
+	<title>Falcon</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./css/cover.css">
+	<style type="text/css">
+		.jumbotron {
+			padding-bottom: 0px;
+			margin: 0px auto;
+			width: 100%;
+			text-align: center;
+			background: #fff; /* For browsers that do not support gradients */
+			background: -webkit-linear-gradient(left, #85EEFC , #ABBAFB); /* For Safari 5.1 to 6.0 */
+		    background: -o-linear-gradient(right, #85EEFC, #ABBAFB); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(right, #85EEFC, #ABBAFB); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to right, #85EEFC , #ABBAFB); /* Standard syntax */
 		}
-		</style>
-		<meta charset="utf-8" />
-		<meta name="author" content="Chintan Ghate">
-		<meta name="keywords" content="markdown, research, notes, note, notebook, notebooks, journal, code, falcon, diary">
-		<meta name="description" content="Falcon App Site">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		.bannerImage {
+			width: 150px;
+			margin: 0px auto;
+		}
+		.jumbotron > h1 {
+			width: 300px;
+			margin: 0px auto;
+			font-variant-caps: all-petite-caps;
+		}
+		.jumbotron > p {
+			width: 300px;
+			margin: 0px auto;
+		}
+		.bannerLeftImage {
+			float: left;
+		}
+		.bannerRightImage {
+			float: right;		
+		}
+		.whyFalcon {
+			padding: 5px 0px 5px 0px;
+			width: 100%;
+			text-align: center;
+			min-height: 110px;
+		}
+		.whyFalconItem {
+			height: 100px;
+			padding: 15px;
+		}
+		.whyFalconItem > img {
+			float: left;
+			height: 70px;
+			margin-right: 15px;
+		}
+		.footer {
+			padding: 15px 0px 15px 15px;
+			text-align: left;
+			margin: 0px;
+			font-size: 15px;
+			width: 100%;
+			min-height: 50px;
+			background: #fff; /* For browsers that do not support gradients */
+			background: -webkit-linear-gradient(left, #85EEFC , #ABBAFB); /* For Safari 5.1 to 6.0 */
+		    background: -o-linear-gradient(right, #85EEFC, #ABBAFB); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(right, #85EEFC, #ABBAFB); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to right, #85EEFC , #ABBAFB);
+		}
+		.whyFalconItem > h4 {
+			margin: 0px;
+			float: left;
+		}
+		.whyFalconItem > p {
+			text-align: left;
+			font-size: 15px;
+			margin-top: 3px;
+		}
+		.appStoreRow {
+			text-align: left;
+			background: #fff; /* For browsers that do not support gradients */
+			background: -webkit-linear-gradient(left, #85EEFC , #ABBAFB); /* For Safari 5.1 to 6.0 */
+		    background: -o-linear-gradient(right, #85EEFC, #ABBAFB); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(right, #85EEFC, #ABBAFB); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to right, #85EEFC , #ABBAFB); /* Standard syntax */
+		}
+		.appStoreRowfooter {
+			padding-top: 50px;
+			margin: 50px 0px 0px 0px;
+			text-align: left;
+			background: #fff; /* For browsers that do not support gradients */
+			background: -webkit-linear-gradient(left, #85EEFC , #ABBAFB); /* For Safari 5.1 to 6.0 */
+		    background: -o-linear-gradient(right, #85EEFC, #ABBAFB); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(right, #85EEFC, #ABBAFB); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to right, #85EEFC , #ABBAFB); /* Standard syntax */
+		}
+		.text {
+			font-family: Raleway, Helvetica, sans-serif;
+			font-style: normal;
+			font-variant-caps: normal;
+			font-size: 20px;
+		}
+		.macOSAppStore {
+			float: right;
+		}
+		.infoImg {
+			height: 50%;
+			max-width: 100%;
+		}
+		.infoImage {
+			width: 80%;
+			margin: 0px auto;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		.info {
+			padding-top: 50px;
+		}
+		.info > h3 {
+			font-variant-caps: all-petite-caps;
+		}
+		.info > p {
+			padding-top: 20px;
+			font-family: 'Source Sans Pro', Helvetica, sans-serif;
+			font-size: 17px;
+			font-style: normal;
+			font-variant-caps: normal;
+			font-weight: 300;
+			line-height: 28px;
+			
+		}
+		.infoleft {
+			text-align: left;
+		}
+		.inforight {
+			text-align: right;
+		}
+		.features {
+			margin-top: 100px;
+		}
+		.infoRow {
+			margin-top: 50px;
+		}
+		.infoRow1 {
+			margin-top: 50px;
+		}
+		.footer > p {
+			float: left;
+		}
+		#MacAppStore {
+			width: auto;
+			height: 150px;
+			margin-right: 30px;
+			margin-bottom: 30px;
+			margin-top: 50px;
+		}
+		.fb-share-button, .twitter-share-button, .ph-vote-button {
+			float: right;
+			margin-right: 15px;
+		}
+		@media (max-width: 860px) {
+			.appStoreRow {
+				text-align: center;
+				padding: 0px 30px 30px 30px;
+			}
+			.macOSAppStore {
+				float: none;
+				margin-left: 20px;
+			}
+			.bannerSideImage {
+				display: none;
+			}
+			.jumbotron {
+				height: 350px;
+			}
+		}
+		@media (max-width: 376px) {
+			.iOSAppStore {
+				margin: 0px auto;
+			}
+			.macOSAppStore {
+				margin: 15px 15px 0px 15px
+			}
+			.whyFalconItem {
+				margin-top: 50px;
+			}
+			.whyFalconItem > img {
+				margin-bottom: 30px;
+			}
+		}
+		
+		@media (min-width: 860px) {
+			.appStoreRow {
+				padding: 0px 40px 30px 40px;
+			}
+			.bannerSideImage {
+				height: 300px;
+				margin-top: -250px;
+			}
+			.jumbotron {
+				height: 410px;
+			}
+		}
+		@media (min-width: 1070px) {
+			.appStoreRow {
+				padding: 0px 50px 30px 50px;
+			}
+			.bannerSideImage {
+				height: 400px;
+				margin-top: -250px;
+			}
+			.jumbotron {
+				height: 500px;
+			}
+		}
+		@media (min-width: 992px) {
+			.info > p {
+				font-size: 20px;
+				line-height: 30px;
+			}
+			.info > h3 {
+				font-size: 30px;
+				line-height: 40px;
+			}
+			.infoImg {
+				margin-left: -50px;
+				margin-right: -50px;
+			}
+			.inforight {
+				margin-left: 50px;
+			}
+			#MacAppStore {
+				width: auto;
+				height: 300px;
+			}
+		}
+		@media (max-width: 992px) {
+			.infoImage {
+				margin-bottom: 0px;
+				margin-top: 30px;
+			}
+			.info {
+				padding-top: 0px;
+				text-align: center;
+			}
+		}
+	</style>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-46474524-7', 'auto');
-		  ga('send', 'pageview');
+		ga('create', 'UA-46474524-7', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<div class="site-wrapper">
 
-		</script>
-	</head>
-	<body>
+		<div class="site-wrapper-inner">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+			<div class="cover-container">
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><img class="icon" src="images/Falcon.png"></span></div>
-							<h2>Falcon</h2>
-							<p>Writing notes made simple!</p>
-							<center>
-								<a target="blank" href="https://itunes.apple.com/us/app/falcon/id1086447938?ls=1&mt=12"><img id="MacAppStore" src="images/OSXFull.png" alt="" /></a>
-								<a target="blank" href="https://itunes.apple.com/us/app/falcon-notes/id1109403132?ls=1&mt=8"><img id="MacAppStore" src="images/iOSFull.png" alt="" /></a>
-							</center>
-						</div>
-					</section>
-
-				<!-- Wrapper -->
-					<section id="wrapper">
-
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<img class="image" src="images/1.png" alt="" />
-									<div class="content">
-										<h2 class="major">Create, Update & Organize notes easily.</h2>
-										<p>Write Notes in markdown, easy-to-write and easy-to-read format. Organise them by tags & notebooks. Search notes by tags, inside app & finder. Tags are not yet supported in iOS. iOS supports whole text search & title-search for notes.</p>
-									</div>
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<img class="image" src="images/2.png" alt="" />
-									<div class="content">
-										<h2 class="major">Preview notes with formatting & images</h2>
-										<p>Falcon supports adding images to your markdown notes. Read notes in elegantly formatted previews.</p>
-									</div>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<img class="image" src="images/3.png" alt="" />
-									<div class="content">
-										<h2 class="major">Live preview notes as you write them.</h2>
-										<p>With live preview you can watch markdown text render into elegant HTML pages instantly. Preview is enabled with code-highlighting & image scaling to display notes perfectly. This feature is an OS X only feature.</p>
-									</div>
-								</div>
-							</section>
-
-						<!-- Four -->
-						<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<img class="image" src="images/4.png" alt="" />
-									<div class="content">
-										<h2 class="major">Distraction free Write and Read modes.</h2>
-										<p>Write & Read your notes in uncluttered and clean interface, to maximize your focus on the task!</p>
-									</div>
-								</div>
-							</section>
-
-					</section>
-					<!-- Five -->
-					<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<img class="image" src="images/sync.png" alt="" />
-									<div class="content">
-										<h2 class="major">Sync notes using iCloud drive</h2>
-										<p>Sync notes across Mac, iPhone, iPad & iPod touch using iCloud drive. Notes are saved locally as well as in iCloud Drive to prevent data loss.</p>
-									</div>
-								</div>
-							</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<center>
-								<a target="blank" href="https://itunes.apple.com/us/app/falcon/id1086447938?ls=1&mt=12"><img id="MacAppStore" src="images/OSXFull.png" alt="" /></a>
-								<a target="blank" href="https://itunes.apple.com/us/app/falcon-notes/id1109403132?ls=1&mt=8"><img id="MacAppStore" src="images/iOSFull.png" alt="" /></a>
-								</br></br></br>
-								<a href="Support.html"><b>Support</b></a>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<a href="PressKit.zip"><b>Press Kit</b></a> 
-							</center>
-							<ul class="copyright">
-									<li>&copy; 2016 <a href="http://www.star-lord.me/"  target="_blank"> Chintan Ghate </a>. All rights reserved.</li>
-									<li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+				<div class="masthead clearfix">
+					<div class="inner">
+						<h3 class="masthead-brand">FALCON</h3>
+						<nav>
+							<ul class="nav masthead-nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="#features">Features</a></li>
+								<li><a href="#PressKit">PressKit</a></li>
+								<li><a href="exporter/" target="_blank">Exporter</a></li>
 							</ul>
-						</div>
-					</section>
+						</nav>
+					</div>
+				</div>
+
+				<div class="jumbotron">
+					<img class="bannerImage" src="images/Falcon.png">
+				  	<h1>Falcon</h1>
+				  	<p>WRITING NOTES MADE SIMPLE!</p>
+				  	<img class="bannerLeftImage bannerSideImage" src="images/bannerLeft.png">
+				  	<img class="bannerRightImage bannerSideImage" src="images/bannerRight.png">
+				</div>
+
+			  	<div class="appStoreRow">
+				  	<a href="https://itunes.apple.com/us/app/falcon-notes/id1109403132?ls=1&mt=8" target="_blank"><img class="iOSAppStore" src="images/iOS.svg"></a>
+				  	<a href="https://itunes.apple.com/us/app/falcon/id1086447938?ls=1&mt=12" target="_blank"><img class="macOSAppStore" src="images/MacOS.svg"></a>
+			  	</div>
+				<div class="whyFalcon">
+					<div class="col-md-4 whyFalconItem">
+						<img src="images/plainText.png">
+						<h4>Simple Storage</h4></br>
+						<p>
+						Falcon stores notes as plaintext files. Easy to import and export. Notebooks are represented as directories.
+						</p>
+					</div>
+					<div class="col-md-4 whyFalconItem">
+						<img src="images/markdown.png">
+						<h4>Markdown Syntax</h4></br>
+						<p>
+						Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to HTML.
+						</p>
+					</div>
+					<div class="col-md-4 whyFalconItem">
+						<img src="images/iCloud.png">
+						<h4>iCloud Support</h4></br>
+						<p>
+						Falcon for OS X & iOS support syncing notes across devices using iCloud Drive.
+						</p>
+					</div>
+				</div>
+				<div class="infoRow infoRow1 clearfix" id="features">
+					<div class="col-md-8 infoImg">
+						<img class="infoImage" src="images/A.png">
+					</div>
+					<div class="col-md-4 info infoleft">
+						<h3>CREATE, UPDATE & ORGANIZE NOTES EASILY.</h3>
+						<p>
+							Write Notes in markdown, easy-to-write and easy-to-read format. Organise them by tags & notebooks. Search notes by tags, inside app & finder. Tags are not yet supported in iOS. iOS supports whole text search & title-search for notes.
+						</p>
+					</div>
+				</div>
+				<div class="infoRow clearfix">
+					<div class="col-md-4 info inforight visible-lg-block visible-md-block">
+						<h3>PREVIEW NOTES WITH CODE-FORMATTING & IMAGES</h3>
+						<p>
+							Falcon supports adding images to your notes. Read notes in elegantly formatted previews. Previews show perfectly resized images, & supports code-blocks with line-numbers & syntax-highlighting.
+						</p>
+					</div>
+					<div class="col-md-8 infoImg">
+						<img class="infoImage" src="images/D.png">
+					</div>
+					<div class="col-md-4 info infoleft visible-sm-block visible-xs-block">
+						<h3>PREVIEW NOTES WITH CODE-FORMATTING & IMAGES</h3>
+						<p>
+							Falcon supports adding images to your notes. Read notes in elegantly formatted previews. Previews show perfectly resized images, & supports code-blocks with line-numbers & syntax-highlighting.
+						</p>
+					</div>
+				</div>
+				<div class="infoRow clearfix">
+					<div class="col-md-8 infoImg">
+						<img class="infoImage" src="images/C.png">
+					</div>
+					<div class="col-md-4 info infoleft">
+						<h3>LIVE PREVIEW & MARKDOWN HELPERS</h3>
+						<p>
+							With live preview you can watch markdown text render into elegant HTML pages instantly, in MacOS. Whether you are new to markdown or proficient in markdown, editor in iOS & MacOS has markdown-tag buttons to help you write & format faster.
+						</p>
+					</div>
+				</div>
+				<div class="infoRow clearfix">
+					<div class="col-md-4 info inforight visible-lg-block visible-md-block">
+						<h3>DISTRACTION FREE WRITE AND READ MODES</h3>
+						<p>
+							Write & Read your notes in uncluttered and clean interface, to maximize your focus on the task! Also, Falcon comes with two beautiful default themes, to make your reading & writing experience better in Light & Dark environments. Themes are modifiable on MacOS.
+						</p>
+					</div>
+					<div class="col-md-8 infoImg">
+						<img class="infoImage" src="images/B.png">
+					</div>
+					<div class="col-md-4 info infoleft visible-sm-block visible-xs-block">
+						<h3>DISTRACTION FREE WRITE AND READ MODES</h3>
+						<p>
+							Write & Read your notes in uncluttered and clean interface, to maximize your focus on the task! Also, Falcon comes with two beautiful default themes, to make your reading & writing experience better in Light & Dark environments. Themes are modifiable on MacOS.
+						</p>
+					</div>
+
+				</div>
+				<div class="infoRow clearfix">
+					<div class="col-md-8 infoImg">
+						<img class="infoImage" src="images/E.png">
+					</div>
+					<div class="col-md-4 info infoleft">
+						<h3>SYNC NOTES USING ICLOUD DRIVE</h3>
+						<p>
+							Sync notes across Mac, iPhone, iPad & iPod touch using iCloud drive. Notes are saved locally as well as in iCloud Drive to prevent data loss.
+						</p>
+					</div>
+				</div>
+				<div class="appStoreRowfooter row" id="PressKit">
+					<center>
+						<a target="blank" href="https://itunes.apple.com/us/app/falcon/id1086447938?ls=1&mt=12"><img id="MacAppStore" src="images/OSXFull.png" alt="" /></a>
+						<a target="blank" href="https://itunes.apple.com/us/app/falcon-notes/id1109403132?ls=1&mt=8"><img id="MacAppStore" src="images/iOSFull.png" alt="" /></a>
+						</br></br></br>
+						<div class="text">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="PressKit.zip">Download Press-Kit</a>
+						</div> 
+					</center>
+				</div>
+				<div class="row footer">
+					<div class="col-md-6">
+						<p>© 2016 <a href="http://www.star-lord.me" target="_blank">Chintan Ghate</a> . All rights reserved.</p>
+					</div>
+					<div class="col-md-6">
+						<!-- <iframe class="ph-vote-button" src="http://c.yvoschaap.com/producthunt/counter.html#href=http%3A%2F%2Fwww.producthunt.com%2Fr%2Fc5e57adce5b8f8%2F54897&layout=wide" width="120" height="25" scrolling="no" frameborder="0" allowtransparency="true"></iframe> -->
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://falcon.star-lord.me" data-text="Falcon: Writing notes made Simple! Now on iOS & MacOS." data-via="ChintanGhate" data-hashtags="FalconNotes">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+						<div class="fb-share-button" data-href="http://falcon.star-lord.me" data-layout="button_count" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ffalcon.star-lord.me%2F&amp;src=sdkpreparse">Share</a></div>
+					</div>
+				</div>
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+		</div>
 
-	</body>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
 </html>
