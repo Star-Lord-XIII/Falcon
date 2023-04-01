@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +14,8 @@
   <meta itemprop="description" content="Export all your notes from Apple Notes to Markdown/HTML with attachments!">
   <meta itemprop="image" content="images/exporter-logo.png">
   <meta name="author" content="Chintan Ghate">
-  <meta name="keywords" content="markdown, html, notes, note, notebook, notebooks, apple notes, export, attachemnts, images">
+  <meta name="keywords"
+    content="markdown, html, notes, note, notebook, notebooks, apple notes, export, attachemnts, images">
 
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="/">
@@ -28,7 +30,8 @@
   <meta name="twitter:description" content="Export all your notes from Apple Notes to Markdown/HTML with attachments!">
   <meta name="twitter:image" content="images/exporter-logo.png">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+    integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.6.0/tiny-slider.css">
   <link rel="stylesheet" href="oasis.css">
@@ -38,124 +41,144 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
   <script async="" src="//www.google-analytics.com/analytics.js"></script>
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-46474524-7', 'auto');
     ga('send', 'pageview');
 
   </script>
-  </head>
-  <body>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4DY6FQXVMH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4DY6FQXVMH');
+  </script>
+</head>
+
+<body>
   <section class="section--tweet">
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Say goodbye to the hassle of manually backing up your Apple Notes, and hello to one-click batch exports!" data-url="http://falcon.star-lord.me/exporter/" data-via="ChintanGhate" data-hashtags="Exporter,AppleNotes" data-show-count="true">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large"
+      data-text="Say goodbye to the hassle of manually backing up your Apple Notes, and hello to one-click batch exports!"
+      data-url="http://falcon.star-lord.me/exporter/" data-via="ChintanGhate" data-hashtags="Exporter,AppleNotes"
+      data-show-count="true">Tweet</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </section>
   <section class="section--hero">
-  <div class="flex--horizontal">
-    <div class="flex_child--horizontal aligner">
-      <h1 class="font-fjalla">Exporter</h1>
-      <p class="">Export all your notes from Apple Notes to Markdown/HTML with attachments.</p>
-      <div class="macButton">
-      <a target="blank" href="https://itunes.apple.com/us/app/exporter/id1099120373?ls=1&amp;mt=12"><img id="MacAppStoreExporter" src="images/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt=""></a>
+    <div class="flex--horizontal">
+      <div class="flex_child--horizontal aligner">
+        <h1 class="font-fjalla">Exporter</h1>
+        <p class="">Export all your notes from Apple Notes to Markdown/HTML with attachments.</p>
+        <div class="macButton">
+          <a target="blank" href="https://itunes.apple.com/us/app/exporter/id1099120373?ls=1&amp;mt=12"><img
+              id="MacAppStoreExporter" src="images/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+              alt=""></a>
+        </div>
+      </div>
+      <div class="flex_child--horizontal fadeInUp">
+        <img src="images/ExporterInAction.gif" alt="">
       </div>
     </div>
-    <div class="flex_child--horizontal fadeInUp">
-      <img src="images/ExporterInAction.gif"  alt="">
+  </section>
+  <section class="section--features scroll-to-reveal js-section">
+    <div class="section__title">
+      <h3 class="font-fjalla">Features of Exporter</h3>
+      <p></p>
     </div>
-  </div>
-</section>
-<section class="section--features scroll-to-reveal js-section">
-  <div class="section__title">
-    <h3 class="font-fjalla">Features of Exporter</h3>
-    <p></p>
-  </div>
-  <div class="flex--horizontal">
-    <div class="features__left aligner flex--vertical">
-      
+    <div class="flex--horizontal">
+      <div class="features__left aligner flex--vertical">
+
         <div class="flex--vertical fadeInLeft fadeInLeft--0">
           <object type="image/svg+xml" data="images/features-circle.svg"></object>
           <p>Exporter prioritizes your data privacy by being a local-only app. Your data never leaves your mac.</p>
         </div>
-      
+
         <div class="flex--vertical fadeInLeft fadeInLeft--1">
           <object type="image/svg+xml" data="images/features-polygon.svg"></object>
-          <p>Supports exporting to markdown or HTML format. Preserves folder structure, and notes metadata like creation and modification dates.</p>
+          <p>Supports exporting to markdown or HTML format. Preserves folder structure, and notes metadata like creation
+            and modification dates.</p>
         </div>
-      
-    </div>
-    <img class="features__image" src="images/Exporter.png" alt="">
-    <div class="features__right aligner flex--vertical">
-      
+
+      </div>
+      <img class="features__image" src="images/Exporter.png" alt="">
+      <div class="features__right aligner flex--vertical">
+
         <div class="flex--vertical fadeInRight fadeInRight--0">
           <object type="image/svg+xml" data="images/features-rec.svg"></object>
           <p>Supports exporting jpeg, png, gif, tiff, bmp, pdf, ics, m4a, mov, & mp3 attachments.</p>
         </div>
-      
+
         <div class="flex--vertical fadeInRight fadeInRight--1">
           <object type="image/svg+xml" data="images/features-triangle.svg"></object>
           <p>Supports exporting selected notebooks using filter-view provided as an in-app purchase feature.</p>
         </div>
-      
+
+      </div>
     </div>
-  </div>
-</section>
-<section class="section--integrations js-section">
-  <div class="section__title">
-    <h3 class="font-fjalla">Migrate from Apple Notes to other note-taking apps</h3>
-  </div>
-  <div class="flex--horizontal">
-    
+  </section>
+  <section class="section--integrations js-section">
+    <div class="section__title">
+      <h3 class="font-fjalla">Migrate from Apple Notes to other note-taking apps</h3>
+    </div>
+    <div class="flex--horizontal">
+
       <a target="blank" href="https://obsidian.md">
         <img class="logo" src="images/Obsidian.png" alt="Obsidian" class="logo">
       </a>
-    
+
       <a target="blank" href="https://bear.app">
         <img class="logo" src="images/Bear.png" alt="Bear Notes" class="logo">
       </a>
-    
+
       <a target="blank" href="https://standardnotes.com">
         <img class="logo" src="images/standard-notes.png" alt="Standard Notes" class="logo">
       </a>
-    
+
       <a target="blank" href="https://craft.do">
         <img class="logo" src="images/craft.png" alt="Craft.do" class="logo">
       </a>
-    
+
       <a target="blank" href="https://getupnote.com">
         <img class="logo" src="images/upnote.png" alt="upnote" class="logo">
       </a>
-    
+
       <a target="blank" href="https://joplinapp.org">
         <img class="logo" src="images/Joplin.png" alt="Joplin" class="logo">
       </a>
-    
+
       <a target="blank" href="https://noteplan.co">
         <img class="logo" src="images/noteplan.png" alt="NotePlan" class="logo">
       </a>
-    
+
       <a target="blank" href="https://agenda.com">
         <img class="logo" src="images/Agenda.jpeg" alt="Agenda" class="logo">
       </a>
-    
+
       <a target="blank" href="https://ulysses.app">
         <img class="logo" src="images/Ulysses.png" alt="Ulysses" class="logo">
       </a>
-    
+
       <a target="blank" href="https://roamresearch.com">
         <img class="logo" src="images/RoamResearch.png" alt="RoamResearch" class="logo">
       </a>
-    
-    <div class="reach-out">
-      <p><b>Please reach out to chintanghate[at]gmail[dot]com for any questions or feedback on the app!</b></p>
-    </section>
-  </div>
-</section>
-<section class="section--footer js-section">
-  <p>© 2023 CHINTAN GHATE . ALL RIGHTS RESERVED.</p>
-</section>
 
-    <script src="./oasis.js"></script>
-  </body>
+      <div class="reach-out">
+        <p><b>Please reach out to chintanghate[at]gmail[dot]com for any questions or feedback on the app!</b></p>
+  </section>
+  </div>
+  </section>
+  <section class="section--footer js-section">
+    <p>© 2023 CHINTAN GHATE . ALL RIGHTS RESERVED.</p>
+  </section>
+
+  <script src="./oasis.js"></script>
+</body>
+
 </html>
